@@ -1,7 +1,7 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod1
+set $mod Mod4
 # Home row direction keys, like vim
 set $left c
 set $down t
@@ -67,7 +67,7 @@ for_window [class="QJackCtl"] floating enable
     bindsym $mod+Return exec $term
 
     # kill focused window
-    bindsym $mod+Shift+y kill
+    bindsym $mod+Ctrl+y kill
 
     # start your launcher
     bindsym $mod+i exec $menu
@@ -81,10 +81,10 @@ for_window [class="QJackCtl"] floating enable
     floating_modifier Mod4 normal
 
     # reload the configuration file
-    bindsym $mod+Shift+0xe8 reload
+    bindsym $mod+Ctrl+0xe8 reload
 
     # exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+E exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'"
+    bindsym $mod+Ctrl+E exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'"
 
 # Moving around:
 #
@@ -94,11 +94,11 @@ for_window [class="QJackCtl"] floating enable
     bindsym $mod+$up focus up
     bindsym $mod+$right focus right
 
-    # _move_ the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+    # _move_ the focused window with the same, but add Ctrl
+    bindsym $mod+Ctrl+$left move left
+    bindsym $mod+Ctrl+$down move down
+    bindsym $mod+Ctrl+$up move up
+    bindsym $mod+Ctrl+$right move right
 #
 # Workspaces:
 #
@@ -133,16 +133,16 @@ for_window [class="QJackCtl"] floating enable
     bindsym $mod+0 workspace 10
 
     # move focused container to workspace
-    bindsym $mod+Shift+0x22 move container to workspace 1
-    bindsym $mod+Shift+0xab move container to workspace 2
-    bindsym $mod+Shift+0xbb move container to workspace 3
-    bindsym $mod+Shift+0x28 move container to workspace 4
-    bindsym $mod+Shift+0x29 move container to workspace 5
-    bindsym $mod+Shift+0x40 move container to workspace 6
-    bindsym $mod+Shift+0x2b move container to workspace 7
-    bindsym $mod+Shift+0x2d move container to workspace 8
-    bindsym $mod+Shift+0x2f move container to workspace 9
-    bindsym $mod+Shift+0x2a move container to workspace 10
+    bindsym $mod+Ctrl+0x22 move container to workspace 1
+    bindsym $mod+Ctrl+0xab move container to workspace 2
+    bindsym $mod+Ctrl+0xbb move container to workspace 3
+    bindsym $mod+Ctrl+0x28 move container to workspace 4
+    bindsym $mod+Ctrl+0x29 move container to workspace 5
+    bindsym $mod+Ctrl+0x40 move container to workspace 6
+    bindsym $mod+Ctrl+0x2b move container to workspace 7
+    bindsym $mod+Ctrl+0x2d move container to workspace 8
+    bindsym $mod+Ctrl+0x2f move container to workspace 9
+    bindsym $mod+Ctrl+0x2a move container to workspace 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 
@@ -163,7 +163,7 @@ for_window [class="QJackCtl"] floating enable
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+Ctrl+space floating toggle
 
     # Swap focus between the tiling area and the floating area
     bindsym $mod+space focus mode_toggle
@@ -172,7 +172,7 @@ for_window [class="QJackCtl"] floating enable
     bindsym $mod+g focus parent
 
     # move window to scratchpad
-    bindsym $mod+Shift+backspace move scratchpad
+    bindsym $mod+Ctrl+backspace move scratchpad
     bindsym $mod+backspace scratchpad show
 
 
