@@ -16,7 +16,7 @@ set $CLEAN_SSH 'source ~/.ssh/environment && ssh-add -D'
 
 # Idle
 set $TIMEOUT_COMMAND $CLEAN_SSH
-set $LOCK_COMMAND 'swaylock -C ~/.config/sway/swaylock/config'
+set $LOCK_COMMAND 'swaylock'
 set $SLEEP_COMMAND 'systemctl suspend'
 
 # Your preferred terminal emulator
@@ -110,39 +110,48 @@ for_window [class="QJackCtl"] floating enable
 
 #    set $find_output swaymsg -t get_tree | jq -r '.nodes[] | select(recurse(.nodes[]?,.floating_nodes[]?) | .focused == true) | .name' | sed -e 's/$monitor-1/A/g' | sed -e 's/$monitor-2/B/g' | sed -e 's/$monitor-3/C/g' | sed -e 's/$monitor-4/D/g'
 
-    bindsym $mod+0x22 workspace 1
-    bindsym $mod+0xab workspace 2
-    bindsym $mod+0xbb workspace 3
-    bindsym $mod+0x28 workspace 4
-    bindsym $mod+0x29 workspace 5
-    bindsym $mod+0x40 workspace 6
-    bindsym $mod+0x2b workspace 7
-    bindsym $mod+0x2d workspace 8
-    bindsym $mod+0x2f workspace 9
-    bindsym $mod+0x2a workspace 10
-
-    bindsym $mod+1 workspace 1
-    bindsym $mod+2 workspace 2
-    bindsym $mod+3 workspace 3
-    bindsym $mod+4 workspace 4
-    bindsym $mod+5 workspace 5
-    bindsym $mod+6 workspace 6
-    bindsym $mod+7 workspace 7
-    bindsym $mod+8 workspace 8
-    bindsym $mod+9 workspace 9
-    bindsym $mod+0 workspace 10
+    bindsym $mod+1 workspace 01
+    bindsym $mod+2 workspace 02
+    bindsym $mod+3 workspace 03
+    bindsym $mod+4 workspace 04
+    bindsym $mod+5 workspace 05
+    bindsym $mod+6 workspace 06
+    bindsym $mod+7 workspace 07
+    bindsym $mod+8 workspace 08
+    bindsym $mod+9 workspace 09
+    bindsym $mod+0 workspace 00
+    bindsym $mod+0x22 workspace 01
+    bindsym $mod+0xab workspace 02
+    bindsym $mod+0xbb workspace 03
+    bindsym $mod+0x28 workspace 04
+    bindsym $mod+0x29 workspace 05
+    bindsym $mod+0x40 workspace 06
+    bindsym $mod+0x2b workspace 07
+    bindsym $mod+0x2d workspace 08
+    bindsym $mod+0x2f workspace 09
+    bindsym $mod+0x2a workspace 00
 
     # move focused container to workspace
-    bindsym $mod+Ctrl+0x22 move container to workspace 1
-    bindsym $mod+Ctrl+0xab move container to workspace 2
-    bindsym $mod+Ctrl+0xbb move container to workspace 3
-    bindsym $mod+Ctrl+0x28 move container to workspace 4
-    bindsym $mod+Ctrl+0x29 move container to workspace 5
-    bindsym $mod+Ctrl+0x40 move container to workspace 6
-    bindsym $mod+Ctrl+0x2b move container to workspace 7
-    bindsym $mod+Ctrl+0x2d move container to workspace 8
-    bindsym $mod+Ctrl+0x2f move container to workspace 9
-    bindsym $mod+Ctrl+0x2a move container to workspace 10
+    bindsym $mod+Ctrl+1 move container to workspace 01
+    bindsym $mod+Ctrl+2 move container to workspace 02
+    bindsym $mod+Ctrl+3 move container to workspace 03
+    bindsym $mod+Ctrl+4 move container to workspace 04
+    bindsym $mod+Ctrl+5 move container to workspace 05
+    bindsym $mod+Ctrl+6 move container to workspace 06
+    bindsym $mod+Ctrl+7 move container to workspace 07
+    bindsym $mod+Ctrl+8 move container to workspace 08
+    bindsym $mod+Ctrl+9 move container to workspace 09
+    bindsym $mod+Ctrl+0 move container to workspace 00
+    bindsym $mod+Ctrl+0x22 move container to workspace 01
+    bindsym $mod+Ctrl+0xab move container to workspace 02
+    bindsym $mod+Ctrl+0xbb move container to workspace 03
+    bindsym $mod+Ctrl+0x28 move container to workspace 04
+    bindsym $mod+Ctrl+0x29 move container to workspace 05
+    bindsym $mod+Ctrl+0x40 move container to workspace 06
+    bindsym $mod+Ctrl+0x2b move container to workspace 07
+    bindsym $mod+Ctrl+0x2d move container to workspace 08
+    bindsym $mod+Ctrl+0x2f move container to workspace 09
+    bindsym $mod+Ctrl+0x2a move container to workspace 00
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 

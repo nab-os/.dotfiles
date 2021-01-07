@@ -2,6 +2,7 @@
 export EDITOR="nvim"
 export TERMINAL="termite"
 export BROWSER="firefox"
+export PATH="$PATH:~/.local/bin"
 
 # Config dirs
 export LESSHISTFILE="-"
