@@ -2,7 +2,7 @@
 export EDITOR="nvim"
 export TERMINAL="termite"
 export BROWSER="firefox"
-export PATH="$PATH:~/.local/bin"
+export PATH="$PATH:/home/nabos/.local/bin"
 
 # Config dirs
 export LESSHISTFILE="-"
