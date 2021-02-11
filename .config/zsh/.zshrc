@@ -117,3 +117,4 @@ fi
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2> /dev/null
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#555555"
+eval "$(starship init zsh)" 2> /dev/null
