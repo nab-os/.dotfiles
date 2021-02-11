@@ -1,6 +1,8 @@
 precmd () { print -Pn "\e]0;`pwd`\a" }
 preexec () { print -Pn "\e]0;$1\a" }
 
+RPROMPT=""
+
 #Correcting backspace problems
 export TERM=linux
 
@@ -113,8 +115,9 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Load zsh-syntax-highlighting; should be last.
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2> /dev/null
+source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#555555"
+source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2> /dev/null
+
 eval "$(starship init zsh)" 2> /dev/null
