@@ -1,5 +1,5 @@
 # Don't print a new line at the start of the prompt
-add_newline = false
+add_newline = true
 format = '''
 [╭─\(](#1E526A)[$directory](grey)[\)─╼](#1E526A) $git_branch$git_commit$git_state$git_status
 [╰─╼](#1E526A) [$username@$hostname](bright-grey) $character
