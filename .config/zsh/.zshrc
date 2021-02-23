@@ -103,21 +103,21 @@ bindkey '^[[1;3D'      cdUndoKey
 clear-screen() { clear; zle redisplay; }
 zle -N clear-screen
 
-source ~/.config/zsh/.aliases
+source ~/.aliases
 
-if [ -r ~/config/zsh/.aliases.local ]; then
-    source ~/config/zsh/.aliases.local
+if [ -r ~/.aliases.local ]; then
+    source ~/.aliases.local
 fi
 
-if [ -r ~/.config/zsh/.zshrc.local ]; then
-    source ~/.config/zsh/.zshrc.local
+if [ -r $ZDOTDIR/.zshrc.local ]; then
+    source $ZDOTDIR/.zshrc.local
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#555555"
-source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2> /dev/null
+source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh 2> /dev/null
 
 eval "$(starship init zsh)" 2> /dev/null

@@ -15,15 +15,12 @@ zstyle ':completion:*' cache-path ~/.zsh_cache
 zstyle ':completion:*' menu select
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 
-fpath=(~/.config/realmenu/.zsh/functions $fpath)
-
 autoload -U promptinit
 autoload -U colors && colors
 promptinit
 PROMPT='>'
-#prompt realmenu
 
-fpath=(~/.zsh/completions $fpath)
+fpath=(~/.config/zsh/completions $fpath)
 autoload -U compinit && compinit
 
 autoload -U up-line-or-beginning-search
@@ -55,10 +52,10 @@ zshaddhistory() {
 }
 
 
-source ~/.config/realmenu/.aliases
+source ~/.aliases
 
-if [ -r ~/.config/realmenu/.aliases.local ]; then
-    source ~/.config/realmenu/.aliases.local
+if [ -r ~/.aliases.local ]; then
+    source ~/.aliases.local
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

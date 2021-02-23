@@ -214,7 +214,7 @@ input * {
 
 
 # Window borders
-default_border pixel 1
+default_border pixel none
 hide_edge_borders both
 
 client.focused          #268BD2FF #002B36CC #618697FF #268BD2FF #002B36FF
