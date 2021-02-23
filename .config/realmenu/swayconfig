@@ -1,0 +1,5 @@
+#Realmenu
+set $menu 'alacritty -t realmenu --config-file $HOME/.config/realmenu/config -e $HOME/.config/realmenu/realmenu.sh'
+for_window [title="realmenu"] floating enable 
+#for_window [title="realmenu"] resize set height 150px
+#for_window [title="realmenu"] resize set width 400px
