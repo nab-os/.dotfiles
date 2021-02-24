@@ -3,7 +3,7 @@
 {
 	"layer": "top",
 	"position": "top",
-    "output": ["DVI-D-1", "DP-2", "HDMI-A-2"],
+    "output": ["DP-1", "DP-2", "HDMI-A-2"],
 
 	"modules-left": [
 		"sway/workspaces",

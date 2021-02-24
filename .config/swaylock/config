@@ -2,8 +2,7 @@ daemonize
 hide-keyboard-layout
 show-failed-attempts
 ignore-empty-password
-image=.config/themes/blured.jpg
-font=incosolata
+image=~/.config/themes/blured.jpg
 inside-color=#00000000
 inside-clear-color=#00000000
 inside-caps-lock-color=#00000000

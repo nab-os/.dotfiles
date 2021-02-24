@@ -7,7 +7,7 @@ export XDG_CURRENT_DESKTOP=sway
 export EDITOR="nvim"
 export TERMINAL="termite"
 export BROWSER="firefox"
-export PATH="$PATH:/home/nabos/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin"
 
 # Config dirs
 export LESSHISTFILE="-"

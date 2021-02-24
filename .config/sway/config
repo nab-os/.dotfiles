@@ -1,7 +1,7 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+set $mod Mod1
 # Home row direction keys, like vim
 set $left c
 set $down t
@@ -50,6 +50,24 @@ exec "mako"
 #exec "networkd-notify"
 bindsym Ctrl+Space exec "makoctl dismiss"
 
+<<<<<<< Updated upstream
+=======
+
+# Floating windows
+for_window [class="Xmessage"] floating enable
+for_window [class="Nautilus"] floating enable
+for_window [class="mobilityVanet"] floating enable
+for_window [class="dolphin"] floating enable
+for_window [class="Thunar"] floating enable
+for_window [class="okular"] floating enable
+for_window [class="Yubico Authenticator"] floating enable
+for_window [class="XEyes"] floating enable
+for_window [class="QJackCtl"] floating enable
+
+for_window [title="Picture in picture"] floating enable
+for_window [title="Picture in picture"] sticky enable
+
+>>>>>>> Stashed changes
 # Basics:
 #
     # start a terminal
@@ -214,7 +232,7 @@ input * {
 
 
 # Window borders
-default_border pixel none
+default_border none
 hide_edge_borders both
 
 client.focused          #268BD2FF #002B36CC #618697FF #268BD2FF #002B36FF
