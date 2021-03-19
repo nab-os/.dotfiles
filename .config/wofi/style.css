@@ -1,0 +1,16 @@
+window {
+    background-color: transparent;
+}
+
+#input {
+    border: none;
+    background-color: #002129;
+    border: solid 2px #00313D;
+    margin-bottom: 10px;
+}
+
+#scroll {
+    background-color: #002129;
+    border: solid 3px #00313D;
+    opacity: 0.8;
+}
