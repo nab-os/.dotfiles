@@ -46,7 +46,6 @@ font inconsolata:DejaVu Sans Mono 8
 focus_follows_mouse no
 mouse_warping none
 
-exec "mako"
 #exec "networkd-notify"
 bindsym --to-code Ctrl+Space exec "makoctl dismiss"
 
@@ -185,9 +184,9 @@ bindsym --to-code XF86AudioLowerVolume exec "pactl set-sink-volume alsa_output.p
 bindsym --to-code XF86AudioRaiseVolume exec "pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%"
 
 input * {
-    xkb_layout fr,fr,us
-    xkb_variant bepo,
-    xkb_options grp:alt_shift_toggle
+    xkb_layout fr,us
+    xkb_variant bepo,colemak
+    xkb_options "grp:alts_toggle"
 }
 
 

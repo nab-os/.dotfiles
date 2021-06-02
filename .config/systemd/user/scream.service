@@ -1,0 +1,8 @@
+[Unit]
+Description=Scream service
+
+[Service]
+ExecStart=/usr/local/bin/scream
+
+[Install]
+WantedBy=default.target
