@@ -1,0 +1,11 @@
+[Unit]
+Description=Swayidle lock daemon
+
+[Service]
+ExecStartPre=/usr/bin/sleep 2
+ExecStart=/usr/bin/swayidle -w \
+    timeout 660 "systemctl --user start lock" \
+    lock "systemctl --user start lock"
+
+[Install]
+WantedBy=default.target

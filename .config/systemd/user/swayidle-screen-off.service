@@ -1,0 +1,11 @@
+[Unit]
+Description=Swayidle screen off daemon
+
+[Service]
+ExecStartPre=/usr/bin/sleep 2
+ExecStart=/usr/bin/swayidle \
+    timeout 600 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"'
+
+[Install]
+WantedBy=default.target

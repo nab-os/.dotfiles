@@ -1,0 +1,11 @@
+[Unit]
+Description=Disable the screens with sway
+Before=sleep.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/swaymsg output * dpms off
+
+[Install]
+WantedBy=sleep.target
+
