@@ -100,6 +100,13 @@ zle -N                 cdUndoKey
 bindkey '^[[1;3A'      cdParentKey
 bindkey '^[[1;3D'      cdUndoKey
 
+
+copy-to-clip() {
+    zle kill-buffer
+    print -rn -- $CUTBUFFER | wl-copy
+}; zle -N copy-to-clip
+bindkey -M viins "^p" copy-to-clip
+
 clear-screen() { clear; zle redisplay; }
 zle -N clear-screen
 
