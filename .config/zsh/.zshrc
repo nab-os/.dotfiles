@@ -62,6 +62,9 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 bindkey "^A" vi-beginning-of-line
 bindkey "^E" vi-end-of-line
 
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # Set title to GNU screen/byobu tab
 settitle() {
     if [ "$TERM" = "screen" ];
@@ -100,6 +103,12 @@ zle -N                 cdUndoKey
 bindkey '^[[1;3A'      cdParentKey
 bindkey '^[[1;3D'      cdUndoKey
 
+my-backward-delete-word() {
+    local WORDCHARS=${WORDCHARS/\//}
+    zle backward-delete-word
+}
+zle -N my-backward-delete-word
+bindkey '^H' my-backward-delete-word
 
 copy-to-clip() {
     zle kill-buffer
