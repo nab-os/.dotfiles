@@ -10,7 +10,7 @@ export TERM=linux
 HISTSIZE=40000
 SAVEHIST=40000
 HISTFILE=~/.cache/zsh/history
-setopt appendhistory autocd extendedglob nomatch notify hist_ignore_all_dups hist_ignore_space clobber COMPLETE_ALIASES
+setopt appendhistory autocd extendedglob nonomatch notify hist_ignore_all_dups hist_ignore_space clobber COMPLETE_ALIASES
 
 unsetopt beep
 bindkey -e

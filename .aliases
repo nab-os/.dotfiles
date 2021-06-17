@@ -10,7 +10,7 @@ alias blk="lsblk -o 'NAME,MODEL,FSTYPE,SIZE,FSUSE%,FSUSED,FSAVAIL,MOUNTPOINT,UUI
 alias gtop="LANG=en_US.utf8 TERM=xterm-256color gtop"
 
 # System aliases
-alias reboot="sudo reboot"
+alias reboot="systemctl reboot"
 
 # Misc
 alias bépo="cat ~/.config/zsh/bepo.txt"
