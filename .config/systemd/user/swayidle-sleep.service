@@ -1,0 +1,11 @@
+[Unit]
+Description=Swayidle sleep daemon
+
+[Service]
+ExecStart=/usr/bin/swayidle \
+    timeout 2700 systemctl suspend \
+    before-sleep systemctl --user start lock
+Restart=always
+
+[Install]
+WantedBy=default.target

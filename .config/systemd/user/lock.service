@@ -1,0 +1,11 @@
+[Unit]
+Description=Lock the screen
+Before=sleep.target
+
+[Service]
+Type=forking
+ExecStartPre=/usr/bin/ssh-add -D
+ExecStart=/usr/bin/swaylock
+
+[Install]
+WantedBy=sleep.target

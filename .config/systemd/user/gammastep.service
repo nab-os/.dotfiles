@@ -1,0 +1,12 @@
+[Unit]
+Description=Dynamic color temperature manager for Wayland
+Documentation=https://gitlab.com/chinstrap/gammastep
+BindsTo=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/gammastep
+Restart=always
+
+[Install]
+WantedBy=sway-session.target

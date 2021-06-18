@@ -1,0 +1,13 @@
+[Unit]
+Description=Desktop notification daemon for Sway
+Documentation=https://github.com/emersion/mako
+BindsTo=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/mako
+Restart=always
+
+[Install]
+WantedBy=sway-session.target
+

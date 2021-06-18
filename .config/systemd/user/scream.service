@@ -1,0 +1,11 @@
+[Unit]
+Description=Scream service
+Documentation=https://github.com/duncanthrax/scream
+BindsTo=sway-session.target
+
+[Service]
+ExecStart=/usr/local/bin/scream
+Restart=always
+
+[Install]
+WantedBy=sway-session.target
