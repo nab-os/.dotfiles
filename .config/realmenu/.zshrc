@@ -51,11 +51,22 @@ zshaddhistory() {
    exit 2;
 }
 
+export KEYTIMEOUT=1
+exit-shell() {
+    exit;
+}
+zle -N exit-shell
+bindkey '\e' exit-shell;
 
 source ~/.aliases
 
 if [ -r ~/.aliases.local ]; then
     source ~/.aliases.local
 fi
+
+source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#555555"
+source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh 2> /dev/null
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
