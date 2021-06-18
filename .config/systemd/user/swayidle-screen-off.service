@@ -4,7 +4,7 @@ BindsTo=sway-session.target
 
 [Service]
 ExecStartPre=/usr/bin/sleep 2
-ExecStart=/usr/bin/swayidle \
+ExecStart=/usr/bin/env swayidle \
     timeout 600 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"'
 Restart=always

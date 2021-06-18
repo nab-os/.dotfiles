@@ -5,7 +5,7 @@ Before=sleep.target
 [Service]
 Type=forking
 ExecStartPre=/usr/bin/ssh-add -D
-ExecStart=/usr/bin/swaylock
+ExecStart=/usr/bin/env swaylock
 
 [Install]
 WantedBy=sleep.target

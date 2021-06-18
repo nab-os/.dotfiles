@@ -4,7 +4,7 @@ BindsTo=sway-session.target
 
 [Service]
 ExecStartPre=/usr/bin/sleep 2
-ExecStart=/usr/bin/swayidle -w \
+ExecStart=/usr/bin/env swayidle -w \
     timeout 660 "systemctl --user start lock" \
     lock "systemctl --user start lock"
 Restart=always

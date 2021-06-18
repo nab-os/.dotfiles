@@ -2,7 +2,7 @@
 Description=Swayidle sleep daemon
 
 [Service]
-ExecStart=/usr/bin/swayidle \
+ExecStart=/usr/bin/env swayidle \
     timeout 2700 systemctl suspend \
     before-sleep systemctl --user start lock
 Restart=always

@@ -49,24 +49,6 @@ mouse_warping none
 #exec "networkd-notify"
 bindsym --to-code Ctrl+Space exec "makoctl dismiss"
 
-<<<<<<< Updated upstream
-=======
-
-# Floating windows
-for_window [class="Xmessage"] floating enable
-for_window [class="Nautilus"] floating enable
-for_window [class="mobilityVanet"] floating enable
-for_window [class="dolphin"] floating enable
-for_window [class="Thunar"] floating enable
-for_window [class="okular"] floating enable
-for_window [class="Yubico Authenticator"] floating enable
-for_window [class="XEyes"] floating enable
-for_window [class="QJackCtl"] floating enable
-
-for_window [title="Picture in picture"] floating enable
-for_window [title="Picture in picture"] sticky enable
-
->>>>>>> Stashed changes
 # Basics:
 #
     # start a terminal
