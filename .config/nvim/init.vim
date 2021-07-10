@@ -37,7 +37,8 @@ Plug 'honza/vim-snippets'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'https://git.glargh.fr/nabos/vim-bepo'
+Plug 'nab-os/vim-bepo'
+" Plug 'https://git.glargh.fr/nabos/vim-bepo'
 
 call plug#end()
 
