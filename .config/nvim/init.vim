@@ -42,6 +42,8 @@ Plug 'nab-os/vim-bepo'
 
 call plug#end()
 
+lua require('plugins')
+
 " ==================== GENERAL ====================
 set nocompatible              " be iMproved, required
 set showcmd                 " show incomplete commands
@@ -56,6 +58,7 @@ colorscheme solarized
 hi! Normal ctermbg=NONE guibg=NONE
 hi clear LineNR
 filetype plugin indent on   " automatic recognition of filetype
+au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=true}
 
 " Undo
 set history=1000
