@@ -35,10 +35,12 @@ Plug 'terryma/vim-smooth-scroll'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'nab-os/vim-bepo'
 " Plug 'https://git.glargh.fr/nabos/vim-bepo'
+
+Plug 'https://bitbucket.org/shor-ty/vimextensionopenfoam.git'
 
 call plug#end()
 
@@ -98,9 +100,9 @@ set autoindent            " Auto-ident
 set smartindent           " Smart ident
 set smarttab              " Reset autoindent after a blank line
 set expandtab             " tabs are spaces
-set tabstop=4             " how many spaces on tab
-set softtabstop=4         " one tab = 4 spaces
-set shiftwidth=4          " reduntant with above
+set tabstop=2             " how many spaces on tab
+set softtabstop=2         " one tab = 4 spaces
+set shiftwidth=2          " reduntant with above
 set list
 set listchars=tab:>-,trail:~,extends:>,precedes:<
 set wrap                    " wrap

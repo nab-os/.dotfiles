@@ -18,14 +18,16 @@ cmd([[packadd packer.nvim]])
 
 --===================================================================
 
+
 local imported_modules = require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-
     use {
         'hrsh7th/nvim-compe',
         config = function()
             require('compe').setup({
                 enabled = true;
+                autocomplete = true;
+                preselect = 'enable';
                 source = {
                     path = true;
                     buffer = true;
@@ -108,14 +110,12 @@ local imported_modules = require('packer').startup(function()
     }
     ]]--
 
-    --[[
     use {
         'norcalli/nvim-colorizer.lua',
         config = function()
             require('colorizer').setup()
         end,
     }
-    ]]--
 
     use {
         'vhyrro/neorg',
@@ -166,11 +166,26 @@ local imported_modules = require('packer').startup(function()
         end
     }
 
-    --[[ Hopefully one day I will remove this comment to replace CoC
     use {
         'neovim/nvim-lspconfig',
+        config = function()
+            --Enable (broadcasting) snippet capability for completion
+            local capabilities = vim.lsp.protocol.make_client_capabilities()
+            capabilities.textDocument.completion.completionItem.snippetSupport = true
+            require('lspconfig').rust_analyzer.setup{
+              capabilities = capabilities,
+            }
+            require('lspconfig').cssls.setup {
+              capabilities = capabilities,
+            }
+            require('lspconfig').html.setup{
+              capabilities = capabilities,
+            }
+            require('lspconfig').theme_check.setup{
+              capabilities = capabilities,
+            }
+        end
     }
-    ]]--
 end)
 
 if fresh_install then
