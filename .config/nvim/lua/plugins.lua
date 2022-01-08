@@ -88,7 +88,6 @@ local imported_modules = require('packer').startup(function()
         requires = {'nvim-treesitter/nvim-treesitter'},
     }
 
-    --[[
     use {
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
@@ -102,13 +101,8 @@ local imported_modules = require('packer').startup(function()
                     },
                 }
             })
-
-           -- vim.api.nvim_set_keymap('n', '<space><space>', ':Telescope find_files<CR>', {silent = true, noremap = true})
-           -- vim.api.nvim_set_keymap('n', '<space>b', ':Telescope buffers<CR>', {silent = true, noremap = true})
-           -- vim.api.nvim_set_keymap('n', '<space>/', ':Telescope live_grep<CR>', {silent = true, noremap = true})
         end,
     }
-    ]]--
 
     use {
         'norcalli/nvim-colorizer.lua',
@@ -117,7 +111,7 @@ local imported_modules = require('packer').startup(function()
         end,
     }
 
-    use {
+--[[    use {
         'vhyrro/neorg',
         config = function()
             require('neorg').setup {
@@ -136,6 +130,7 @@ local imported_modules = require('packer').startup(function()
         end,
         requires = 'nvim-lua/plenary.nvim'
     }
+    ]]--
 
     use {
         'lewis6991/gitsigns.nvim',
@@ -191,5 +186,9 @@ end)
 if fresh_install then
     cmd('exec \'PackerInstall\'')
 end
+
+vim.api.nvim_set_keymap('n', '<space>a', ':Telescope find_files<CR>', {silent = true, noremap = true})
+vim.api.nvim_set_keymap('n', '<space>b', ':Telescope buffers<CR>', {silent = true, noremap = true})
+vim.api.nvim_set_keymap('n', '<space>/', ':Telescope live_grep<CR>', {silent = true, noremap = true})
 
 return imported_modules

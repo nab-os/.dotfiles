@@ -206,9 +206,9 @@ let g:tagbar_map_preview = 'O'
 
 " FZF
 set wildmenu
-nnoremap <expr> <space><space> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<CR>"
-nnoremap <silent> <space>b :Buffers<CR>
-nnoremap <silent> <space>/ :execute 'Ag ' . input('Ag/')<CR>
+" nnoremap <expr> <space><space> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<CR>"
+" nnoremap <silent> <space>b :Buffers<CR>
+" nnoremap <silent> <space>/ :execute 'Ag ' . input('Ag/')<CR>
 if executable('ag')
     set grepprg=ag\ --nogroup\ --column
     set grepformat=%f:%l:%c%m
