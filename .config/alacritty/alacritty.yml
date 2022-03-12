@@ -5,4 +5,5 @@ colors:
   primary:
     background: '#002B36'
     foreground: '#d6d6d6'
-background_opacity: 0.8
+window:
+  opacity: 0.8
