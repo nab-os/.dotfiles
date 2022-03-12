@@ -3,10 +3,10 @@ Description=Swayidle lock daemon
 BindsTo=sway-session.target
 
 [Service]
-ExecStartPre=/usr/bin/sleep 2
 ExecStart=/usr/bin/env swayidle -w \
     timeout 660 "systemctl --user start lock" \
-    lock "systemctl --user start lock"
+    before-sleep "loginctl lock-session" \
+    lock "/usr/bin/ssh-add -D 2> /dev/null; /usr/bin/env swaylock"
 Restart=always
 
 [Install]

@@ -3,8 +3,7 @@ Description=Swayidle sleep daemon
 
 [Service]
 ExecStart=/usr/bin/env swayidle \
-    timeout 2700 systemctl suspend \
-    before-sleep systemctl --user start lock
+    timeout 2700 "systemctl suspend"
 Restart=always
 
 [Install]
