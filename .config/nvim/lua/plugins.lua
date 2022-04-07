@@ -187,7 +187,7 @@ if fresh_install then
     cmd('exec \'PackerInstall\'')
 end
 
-vim.api.nvim_set_keymap('n', '<space>a', ':Telescope find_files<CR>', {silent = true, noremap = true})
+vim.api.nvim_set_keymap('n', '<space><space>', ':Telescope find_files<CR>', {silent = true, noremap = true})
 vim.api.nvim_set_keymap('n', '<space>b', ':Telescope buffers<CR>', {silent = true, noremap = true})
 vim.api.nvim_set_keymap('n', '<space>/', ':Telescope live_grep<CR>', {silent = true, noremap = true})
 
