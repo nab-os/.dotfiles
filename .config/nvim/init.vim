@@ -35,6 +35,11 @@ Plug 'terryma/vim-smooth-scroll'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+Plug 'sQVe/sort.nvim'
+
+Plug 'vim-syntastic/syntastic'
+Plug 'rust-lang/rust.vim'
+
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'nab-os/vim-bepo'
@@ -44,7 +49,7 @@ Plug 'https://bitbucket.org/shor-ty/vimextensionopenfoam.git'
 
 call plug#end()
 
-lua require('plugins')
+" lua require('plugins')
 
 " ==================== GENERAL ====================
 set nocompatible              " be iMproved, required
@@ -60,7 +65,7 @@ colorscheme solarized
 hi! Normal ctermbg=NONE guibg=NONE
 hi clear LineNR
 filetype plugin indent on   " automatic recognition of filetype
-au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=true}
+" au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=true}
 
 " Undo
 set history=1000
@@ -68,7 +73,7 @@ set undodir=~/.config/nvim/undodir
 set undofile
 
 " Status line
-set statusline=%{get(g:,'coc_git_status','')}
+"set statusline=%{get(g:,'coc_git_status','')}
 set statusline+=\ \ \|\ \ %t
 set laststatus=2
 
@@ -104,7 +109,7 @@ set tabstop=2             " how many spaces on tab
 set softtabstop=2         " one tab = 4 spaces
 set shiftwidth=2          " reduntant with above
 set list
-set listchars=tab:>-,trail:~,extends:>,precedes:<
+set listchars=tab:\ \ ,trail:~,extends:>,precedes:<,nbsp:·
 set wrap                    " wrap
 
 " Split preferences
@@ -195,7 +200,7 @@ set viewoptions=cursor,folds,slash,unix
 noremap <silent> S :call smooth_scroll#up(&scroll, 7, 1)<CR>
 noremap <silent> T :call smooth_scroll#down(&scroll, 7, 1)<CR>
 
-" Tagbar
+" TAGBAR
 nmap <F9> :TagbarToggle<CR>
 let g:tagbar_map_togglesort = ''
 let g:tagbar_map_toggleautoclose = ''
@@ -223,26 +228,26 @@ nmap <silent> R :wincmd l<CR>
 nmap gq :bp <BAR> bd #<CR>
 
 " COC
-set hidden
-set cmdheight=2
-set updatetime=300
-set shortmess+=c
-set signcolumn=yes
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+"set hidden
+"set cmdheight=2
+"set updatetime=300
+"set shortmess+=c
+"set signcolumn=yes
+"inoremap <silent><expr> <TAB>
+"      \ pumvisible() ? "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"
+"function! s:check_back_space() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+"
+"nmap <silent> gd <Plug>(coc-definition)
+"nmap <silent> gy <Plug>(coc-type-definition)
+"nmap <silent> gi <Plug>(coc-implementation)
+"nmap <silent> gr <Plug>(coc-references)
 
 " VIM-AIRLINE
 let g:airline#extensions#tabline#enabled = 1
@@ -273,3 +278,18 @@ let g:UltiSnipsSnippetsDir = "~/.config/nvim/snippets"
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
+" RUST
+syntax enable
+filetype plugin indent on
+let g:rustfmt_autosave = 1
+
+" SYNTASTIC
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
