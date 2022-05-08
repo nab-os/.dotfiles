@@ -35,9 +35,9 @@ nnoremap <silent> <F4> :call NumberToggle()<cr>
 "" Smooth scroll
 noremap <silent> S :call smooth_scroll#up(&scroll, 7, 1)<CR>
 noremap <silent> T :call smooth_scroll#down(&scroll, 7, 1)<CR>
-"
-"" Tagbar
-nmap <F5> :TagbarToggle<CR>
+
+" TAGBAR
+nmap <F9> :TagbarToggle<CR>
 let g:tagbar_map_togglesort = ''
 let g:tagbar_map_toggleautoclose = ''
 let g:tagbar_map_togglepause = ''
