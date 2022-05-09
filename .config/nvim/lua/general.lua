@@ -26,6 +26,10 @@ function M.setup()
     -- Visual effect when copying
     vim.cmd([[autocmd TextYankPost <buffer> lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=true}]])
 
+    -- Last cursor position
+    vim.cmd([[autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif ]])
+
+    -- Spell
     vim.opt.spell = false;
     vim.opt.spelllang = { 'en_us', 'fr' };
     vim.api.nvim_set_keymap('n', '<F8>', ':set spell!<CR>', opts);

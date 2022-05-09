@@ -7,9 +7,7 @@ call plug#begin()
 
 Plug 'preservim/tagbar'
 Plug 'simnalamburt/vim-mundo'
-"
-Plug 'farmergreg/vim-lastplace'
-"
+
 Plug 'terryma/vim-smooth-scroll'
 
 Plug 'nab-os/vim-bepo'
