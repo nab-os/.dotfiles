@@ -1,0 +1,12 @@
+[Unit]
+Description=Swayidle lock daemon
+BindsTo=sway-session.target
+
+[Service]
+ExecStart=/usr/bin/env swayidle -w \
+    before-sleep "loginctl lock-session" \
+    lock "/usr/bin/ssh-add -D 2> /dev/null; swaylock"
+Restart=always
+
+[Install]
+WantedBy=sway-session.target
