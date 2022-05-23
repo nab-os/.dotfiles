@@ -20,7 +20,6 @@ function M.setup()
 
     -- Undo
     vim.opt.history = 1000
-    vim.opt.undodir = "~/.config/nvim/undodir"
     vim.opt.undofile = true
 
     -- Visual effect when copying
