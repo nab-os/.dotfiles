@@ -1,3 +1,6 @@
+on-button-left=dismiss
+on-button-right=dismiss
+
 [urgency=normal]
 border-size=0
 background-color=#08415CCC
