@@ -1,3 +1,13 @@
+theme = "my_theme"
+
+[editor]
+line-number = "relative"
+mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+
 [keys.normal]
 c = "move_char_left"
 t = "move_line_down"
@@ -7,12 +17,14 @@ l = "change_selection"
 C-v = "select_mode"
 C-w = { c = "jump_view_left", t = "jump_view_down", s = "jump_view_up", r = "jump_view_right" }
 C-s = "select_regex"
-"_" = "goto_line_start"
-"$" = "goto_line_end"
 C-n = "goto_next_paragraph"
 C-p = "goto_prev_paragraph"
-T = "half_page_down"
-S = "half_page_up"
+T = "copy_selection_on_next_line"
+S = "copy_selection_on_prev_line"
+A-r = "replace"
+A-s = "save_selection"
+"backspace" = ":buffer-previous"
+"ret" = ":buffer-next"
 
 [keys.insert]
 C-c = "normal_mode"
@@ -22,12 +34,8 @@ c = "extend_char_left"
 t = "extend_line_down"
 s = "extend_line_up"
 r = "extend_char_right"
-C-c = "normal_mode"
 "C-s" = "select_regex"
 l = "change_selection"
-"_" = "goto_line_start"
-"$" = "goto_line_end"
 C-n = "goto_next_paragraph"
 C-p = "goto_prev_paragraph"
-T = "half_page_down"
-S = "half_page_up"
+A-r = "replace"
