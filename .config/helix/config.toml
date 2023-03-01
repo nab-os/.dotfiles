@@ -3,6 +3,7 @@ theme = "my_theme"
 [editor]
 line-number = "relative"
 mouse = false
+true-color = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -23,7 +24,7 @@ T = "copy_selection_on_next_line"
 S = "copy_selection_on_prev_line"
 A-r = "replace"
 A-s = "save_selection"
-"backspace" = ":buffer-previous"
+"backspace" = "goto_last_accessed_file"
 "ret" = ":buffer-next"
 
 [keys.insert]
