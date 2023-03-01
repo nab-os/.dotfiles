@@ -137,4 +137,3 @@ source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#555555"
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh 2> /dev/null
 
-eval "$(starship init zsh)" 2> /dev/null
