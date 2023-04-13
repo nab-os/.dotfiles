@@ -9,6 +9,30 @@ true-color = true
 insert = "bar"
 normal = "block"
 
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name", "diagnostics"]
+right = ["selections", "position", "file-encoding", "file-line-ending", "file-type", "separator", "spacer", "version-control", "spacer"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+enable = true
+
+[editor.indent-guides]
+render = true
+character = "┊" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 25 # increase value to reduce forced mid-word wrapping
+max-indent-retain = 40
+wrap-indicator = ""  # set wrap-indicator to "" to hide it
+
+
 [keys.normal]
 c = "move_char_left"
 t = "move_line_down"
