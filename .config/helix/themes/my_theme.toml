@@ -1,8 +1,8 @@
 # Author: GreasySlug <9619abgoni@gmail.com>
 
 "ui.background" = { fg = "white" }
-"ui.background.separator" = { fg = "gray" }
-"ui.menu" = { fg = "gray" }
+"ui.background.separator" = { fg = "white" }
+"ui.menu" = { fg = "white" }
 "ui.menu.selected" = { modifiers = ["reversed"] }
 "ui.menu.scroll" = { fg = "light-gray" }
 "ui.linenr" = { fg = "light-gray" }
@@ -10,16 +10,16 @@
 "ui.popup" = { fg = "white", bg = "#004152" }
 "ui.window" = { fg = "white", bg = "#004152" }
 "ui.selection" = { bg = "#004152" }
-"comment" = { fg = "gray", modifiers = ["italic"] }
+"comment" = { fg = "white", modifiers = ["italic"] }
 "ui.statusline" = { fg = "white" }
-"ui.statusline.inactive" = { fg = "gray" }
+"ui.statusline.inactive" = { fg = "white" }
 "ui.statusline.normal" = { fg = "blue", modifiers = ["reversed"] }
 "ui.statusline.insert" = { fg = "green", modifiers = ["reversed"] }
 "ui.statusline.select" = { fg = "magenta", modifiers = ["reversed"] }
 "ui.help" = { fg = "light-gray" }
 "ui.cursor.match" = { fg = "light-yellow", modifiers = ["underlined"] }
 "ui.cursor.primary" = {modifiers = ["reversed", "rapid_blink"] }
-"ui.virtual.ruler" = { fg = "gray", modifiers = ["reversed"] }
+"ui.virtual.ruler" = { fg = "white",  modifiers = ["reversed"] }
 "ui.virtual.whitespace" = "white"
 "ui.virtual.indent-guide" = "white"
 
@@ -54,16 +54,16 @@
 "diff.delta" = "yellow"
 "diff.minus" = "light-red"
 
-"ui.gutter" = "gray" 
+"ui.gutter" = "white" 
 "info" = "light-blue" 
-"hint" = "gray" 
-"debug" = "gray"  
+"hint" = "white" 
+"debug" = "white"  
 "warning" = "yellow" 
 "error" = "light-red" 
 
 "diagnostic" = { modifiers = ["underlined"] }
 "diagnostic.info" = { fg = "light-blue", modifiers = ["underlined"] }
-"diagnostic.hint" = { fg = "gray", modifiers = ["underlined"] }
-"diagnostic.debug" ={ fg ="gray",  modifiers = ["underlined"] }
+"diagnostic.hint" = { fg = "white", modifiers = ["underlined"] }
+"diagnostic.debug" ={ fg = "white",  modifiers = ["underlined"] }
 "diagnostic.warning" = { fg = "yellow", modifiers = ["underlined"] }
 "diagnostic.error" = { fg ="light-red", modifiers = ["underlined"] }

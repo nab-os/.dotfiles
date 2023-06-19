@@ -15,7 +15,7 @@ colors:
 
   # Normal colors
   normal:
-    black:   '#04111d' # base02
+    black:   '#000000' # base02
     red:     '#ad1133' # red
     green:   '#0a8667' # green
     yellow:  '#c1730e' # yellow
@@ -27,7 +27,7 @@ colors:
 
   # Bright colors
   bright:
-    black:   '#020a12' # base02
+    black:   '#000000' # base02
     red:     '#bd092a' # red
     green:   '#019e77' # green
     yellow:  '#e39f0d' # yellow

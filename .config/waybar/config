@@ -90,6 +90,7 @@
         "interval": 2,
         "on-scroll-up": "mpc volume +5",
         "on-scroll-down": "mpc volume -5",
+		"on-click": "mpc toggle",
         "consume-icons": {
             "on": " " // Icon shows only when "consume" is on
         },
