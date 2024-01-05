@@ -24,3 +24,10 @@ alias gitlog2="git log --graph --abbrev-commit --decorate --format=format:'%C(bo
 
 # Pijul aliases
 alias pj="pijul"
+
+# Zellij
+alias z="zellij da --yes && zellij attach -c base"
+alias rp="zellij action new-tab --layout rust --cwd "
+
+# Proxy
+alias proxy="ssh passh -D 1080 -TN"

@@ -35,7 +35,7 @@ fpath=(~/.config/zsh/functions $fpath)
 autoload -U promptinit
 autoload -U colors && colors
 promptinit
-prompt nabos
+prompt simple
 
 # Completion
 fpath=(~/.zsh/completions $fpath)
@@ -131,6 +131,8 @@ if [ -r $ZDOTDIR/.zshrc.local ]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source $ZDOTDIR/zellij 2> /dev/null
 
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
