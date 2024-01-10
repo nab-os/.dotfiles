@@ -32,10 +32,10 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 
 fpath=(~/.config/zsh/functions $fpath)
 
-autoload -U promptinit
 autoload -U colors && colors
-promptinit
-prompt simple
+# autoload -U promptinit
+# promptinit
+# prompt adam2
 
 # Completion
 fpath=(~/.zsh/completions $fpath)
@@ -132,7 +132,9 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source $ZDOTDIR/zellij 2> /dev/null
+fpath+=($ZDOTDIR/pure)
+autoload -U promptinit; promptinit
+prompt pure
 
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
